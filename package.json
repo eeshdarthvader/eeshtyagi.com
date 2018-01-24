@@ -12,6 +12,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lh": "lighthouse 'https://eeshtyagi.com' --port=9222 --chrome-flags='--headless' --output-path=stdout $@"
+    "lh": "lighthouse 'https://eeshtyagi.com' --chrome-flags='--headless' --output-path=stdout $@"
   }
 }
