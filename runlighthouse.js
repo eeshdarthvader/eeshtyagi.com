@@ -146,6 +146,9 @@ function run(config) {
 
 // Run LH if this is a PR.
 const config = getConfig();
+console.log(config.API_KEY);
+console.log(config.BITBUCKET_REPO_OWNER);
+console.log(config.BITBUCKET_COMMIT);
 run(config);
 // if (process.env.TRAVIS_EVENT_TYPE === 'pull_request') {
 //   run(config);
