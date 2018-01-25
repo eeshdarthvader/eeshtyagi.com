@@ -136,7 +136,7 @@ function run(config) {
           `Started Lighthouse run on WebPageTest: ${json.data.target_url}`);
       return;
     }
-    console.log('Lighthouse CI score:', json.score);
+    console.log('Lighthouse CI score:', json);
   })
   .catch(err => {
     console.log('Lighthouse CI failed', err);
