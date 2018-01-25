@@ -24,4 +24,4 @@ pipelines:
           # - yarn
           # - yarn lh
           - curl -o- -L deploy.sh | bash -s -- --version 0.18.1
-          - node node_modules/lighthouse-ci/runlighthouse.js https://eeshtyagi.com
+          - node runlighthouse.js https://eeshtyagi.com
