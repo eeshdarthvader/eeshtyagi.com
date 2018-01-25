@@ -95,11 +95,11 @@ function getConfig() {
   console.log(`Using runner: ${config.runner}`);
 
   config.pr = {
-    number: parseInt(process.env.TRAVIS_PULL_REQUEST, 10),
-    sha: process.env.TRAVIS_PULL_REQUEST_SHA
+    number: parseInt(process.env.BITBUCKET_COMMIT, 10),
+    sha: process.env.BITBUCKET_COMMIT
   };
 
-  const repoSlug = process.env.TRAVIS_PULL_REQUEST_SLUG;
+  const repoSlug = process.env.BITBUCKET_REPO_OWNER;
   config.repo = {
     owner: repoSlug.split('/')[0],
     name: repoSlug.split('/')[1]
@@ -146,8 +146,9 @@ function run(config) {
 
 // Run LH if this is a PR.
 const config = getConfig();
-if (process.env.TRAVIS_EVENT_TYPE === 'pull_request') {
-  run(config);
-} else {
-  console.log('Lighthouse is not run for non-PR commits.');
-}
+run(config);
+// if (process.env.TRAVIS_EVENT_TYPE === 'pull_request') {
+//   run(config);
+// } else {
+//   console.log('Lighthouse is not run for non-PR commits.');
+// }
