@@ -9,6 +9,7 @@ module.exports = {
     }],
   
     audits: [
+       "user-timings",
       'first-meaningful-paint',
       'speed-index-metric',
       'first-interactive',

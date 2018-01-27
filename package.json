@@ -12,9 +12,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lh": "lighthouse https://www.eeshtyagi.com --config-path=custom-config.js --chrome-flags='--no-sandbox --headless' --output json"
+    "lh": "lighthouse https://www.eeshtyagi.com --quiet --chrome-flags='--no-sandbox --headless' --output json"
   },
   "devDependencies": {
-    "lighthouse-ci": "https://github.com/ebidel/lighthouse-ci"
+    "lighthouse-pwa": "^0.1.0"
   }
 }
