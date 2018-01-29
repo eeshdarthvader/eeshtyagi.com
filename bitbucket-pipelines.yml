@@ -3,11 +3,21 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: node
 
 pipelines:
   default:
     - step:
+        name: run headless chrome
+        image: justinribeiro/chrome-headless
+        caches:
+          - node
+          - yarncustom
+        script: # Modify the commands below to build your repository.
+          - yarn global add lighthouse-pwa
+          - yarn lh
+    - step:
+        image: node
+        name: build and add lighthouse
         caches:
           - node
           - yarncustom
