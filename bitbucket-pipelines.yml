@@ -15,7 +15,7 @@ pipelines:
           - node
           - yarncustom  
         script: # Modify the commands below to build your repository.
-          - docker run -d -p 9222:9222 --cap-add=SYS_ADMIN justinribeiro/chrome-headless
+          - docker run --init -it --rm --name chrome --shm -size=1024m -p=127.0.0.1:9222:9222 --cap-add=SY            S_ADMIN \ yukinying/chrome-headless-browser
           - yarn global add lighthouse-pwa
           - yarn lh
 definitions:
