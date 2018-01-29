@@ -8,19 +8,17 @@
 
 # Download chrome inside of our CI env.
 
-if [ "$APPVEYOR" == "True" ]; then
-  url="https://download-chromium.appspot.com/dl/Win?type=snapshots"
-else
-  url="https://download-chromium.appspot.com/dl/Linux_x64?type=snapshots"
-fi
+RUN echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/chrome.list
 
-if [ x"$LIGHTHOUSE_CHROMIUM_PATH" == x ]; then
-  echo "Error: Environment variable LIGHTHOUSE_CHROMIUM_PATH not set"
-  exit 1
-fi
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 
-if [ -e "$LIGHTHOUSE_CHROMIUM_PATH" ]; then
-  echo "cached chrome found"
-else
-  wget "$url" --no-check-certificate -q -O chrome.zip && unzip chrome.zip
-fi
+RUN set -x \
+    && apt-get update \
+    && apt-get install -y \
+        xvfb \
+        google-chrome-stable
+
+ADD scripts/xvfb-chrome /usr/bin/xvfb-chrome
+RUN ln -sf /usr/bin/xvfb-chrome /usr/bin/google-chrome
+
+ENV CHROME_BIN /usr/bin/google-chrome
