@@ -14,8 +14,6 @@ pipelines:
         services:
           - docker  
         script: # Modify the commands below to build your repository.
-          - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.18.1
-          - export PATH=$HOME/.yarn/bin:$PATH
           - apt-get update; apt-get install -y gettext-base;
           - echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/chrome.list
           - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
@@ -24,7 +22,6 @@ pipelines:
           - ln -sf /usr/bin/xvfb-chrome /usr/bin/google-chrome
           - chmod 755 /usr/bin/google-chrome
           - yarn global add lighthouse-pwa
-          - yarn
           - docker image build -t react:app .
-          - docker container run -it -p 3000:3000 react:app
+          - docker container run -p 3000:3000 react:app
           - yarn lh
