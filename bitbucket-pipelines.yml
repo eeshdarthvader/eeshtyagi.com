@@ -23,5 +23,7 @@ pipelines:
           - chmod 755 /usr/bin/google-chrome
           - yarn global add lighthouse-pwa
           - docker image build -t react:app .
-          - docker container run -p 3000:3000 react:app
+          - docker container run -it -v $(pwd):/app react:app build
+          - docker run -v /app/build/:/app bitnami/nginx:latest
+          - docker run -p 3000:8080 -p 9443:8443 bitnami/nginx:latest
           - yarn lh
