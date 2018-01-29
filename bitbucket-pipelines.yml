@@ -9,12 +9,9 @@ pipelines:
     - step:
         name: run headless chrome
         image: justinribeiro/chrome-headless
-        caches:
-          - node
-          - yarncustom
+        services: docker
         script: # Modify the commands below to build your repository.
-          - yarn global add lighthouse-pwa
-          - yarn lh
+          - docker run -d -p 9222:9222 --cap-add=SYS_ADMIN justinribeiro/chrome-headless
     - step:
         image: node
         name: build and add lighthouse
