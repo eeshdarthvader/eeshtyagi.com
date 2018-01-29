@@ -23,5 +23,4 @@ pipelines:
           - yarn global add lighthouse-pwa
           - yarn
           - yarn build
-          - yarn start
           - yarn lh
