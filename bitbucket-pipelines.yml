@@ -22,7 +22,7 @@ pipelines:
           - ln -sf /usr/bin/xvfb-chrome /usr/bin/google-chrome
           - chmod 755 /usr/bin/google-chrome
           - yarn global add lighthouse-pwa
-          - yarn global add serve
           - yarn
           - yarn build
-          - serve -s build && yarn lh
+          - yarn start | cat
+          - yarn lh
