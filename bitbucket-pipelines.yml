@@ -24,6 +24,6 @@ pipelines:
           - yarn global add lighthouse-pwa
           - yarn
           - yarn lh
- definitions:
+definitions:
   caches:
-    yarncustom: /usr/local/share/.cache/yarn/v1         
+    yarncustom: /usr/local/share/.cache/yarn/v1
