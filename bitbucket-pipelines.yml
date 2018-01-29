@@ -4,14 +4,16 @@
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
 image: node
-image: justinribeiro/chrome-headless
 
 pipelines:
   default:
     - step:
         caches:
           - node
+          - yarncustom
         script: # Modify the commands below to build your repository.
           - yarn global add lighthouse-pwa
-          - yarn
           - yarn lh
+definitions:
+  caches:
+    yarncustom: /usr/local/share/.cache/yarn/v1
