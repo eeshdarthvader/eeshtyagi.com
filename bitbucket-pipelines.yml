@@ -15,8 +15,7 @@ pipelines:
           - node
           - yarncustom  
         script: # Modify the commands below to build your repository.
-          - docker run -d -p 9222:9222 justinribeiro/chrome-headless
-          - ln -sf /usr/bin/xvfb-chrome /usr/bin/google-chrome
+          - yarn run headlessChrome
           - yarn global add lighthouse-pwa
           - yarn lh
 definitions:

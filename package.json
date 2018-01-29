@@ -12,6 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "headlessChrome": "chmod +x ./headlessChrome.sh",
     "lh": "lighthouse https://www.eeshtyagi.com --quiet --chrome-flags='--no-sandbox --headless' --output json"
   },
   "devDependencies": {
