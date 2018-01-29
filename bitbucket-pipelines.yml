@@ -9,7 +9,8 @@ pipelines:
     - step:
         name: run headless chrome
         image: justinribeiro/chrome-headless
-        services: docker
+        services: 
+          - docker
         script: # Modify the commands below to build your repository.
           - docker run -d -p 9222:9222 --cap-add=SYS_ADMIN justinribeiro/chrome-headless
     - step:
