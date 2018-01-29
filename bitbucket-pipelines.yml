@@ -4,6 +4,7 @@
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
 image: node
+image: justinribeiro/chrome-headless
 
 pipelines:
   default:
@@ -11,8 +12,6 @@ pipelines:
         caches:
           - node
         script: # Modify the commands below to build your repository.
-          - docker run -d -p 9222:9222 justinribeiro/chrome-headless
-          - chmod 755 /usr/bin/google-chrome
           - yarn global add lighthouse-pwa
           - yarn
           - yarn lh
