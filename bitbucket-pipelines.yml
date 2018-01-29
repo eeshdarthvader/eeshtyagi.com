@@ -10,7 +10,9 @@ pipelines:
     - step:
         caches:
           - node
-        name: lighthouse  
+        name: lighthouse
+        services:
+          - docker  
         script: # Modify the commands below to build your repository.
           - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.18.1
           - export PATH=$HOME/.yarn/bin:$PATH
@@ -23,6 +25,6 @@ pipelines:
           - chmod 755 /usr/bin/google-chrome
           - yarn global add lighthouse-pwa
           - yarn
-          - yarn build
-          - yarn start | cat
+          - docker image build -t react:app .
+          - docker container run -it -p 3000:3000 react:app
           - yarn lh
