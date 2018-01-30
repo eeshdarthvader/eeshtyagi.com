@@ -19,8 +19,9 @@ jobs:
             mv /tmp/docker/* /usr/bin
       # build and push Docker image
       - run:
-          - echo $pwd
-          - docker image build -t react:app .        
+          command:
+            echo $pwd
+            docker image build -t react:app .        
       - run: yarn
       - run:
           name: Build app image
