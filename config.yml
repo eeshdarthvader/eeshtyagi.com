@@ -8,7 +8,10 @@ jobs:
       - checkout
       - run:
           name: Build Docker image
-          command:
-            docker build -t bitnami/nginx:latest https://github.com/bitnami/bitnami-docker-nginx.git
+          command: docker build -t bitnami/nginx:latest https://github.com/bitnami/bitnami-docker-nginx.git
+## Customize dependencies
+  dependencies:
+    pre:
+      - yarn
             
 
