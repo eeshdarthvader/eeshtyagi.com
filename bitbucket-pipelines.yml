@@ -12,7 +12,7 @@ pipelines:
           - node
         name: lighthouse
         services:
-          - docker  
+          - docker
         script: # Modify the commands below to build your repository.
           - apt-get update; apt-get install -y gettext-base;
           - echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/chrome.list
@@ -24,6 +24,6 @@ pipelines:
           - yarn global add lighthouse-pwa
           - docker image build -t react:app .
           - docker container run -v $(pwd):/app react:app build
-          - docker run -v /app/build/:/app bitnami/nginx:latest
-          - docker run -p 3000:8080 -p 9443:8443 bitnami/nginx:latest
+          - docker container run --privileged -p 3000:8080 -p 9443:8443 -v $(pwd):/app bitnami/nginx:latest
           - yarn lh
+         
