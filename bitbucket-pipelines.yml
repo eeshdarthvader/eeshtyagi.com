@@ -17,5 +17,5 @@ pipelines:
           - yarn global add lighthouse-pwa
           - docker image build -t react:app .
           - docker container run -v $(pwd):/app react:app build
-          - docker  run -d -p 3000:8080 -p 9443:8443 -v $BITBUCKET_CLONE_DIR/build:/app -w ./app bitnami/nginx:latest
+          - docker  run -d -p 3000:8080 -p 9443:8443 -v $BITBUCKET_CLONE_DIR/build:/app bitnami/nginx:latest
          
