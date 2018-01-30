@@ -33,6 +33,8 @@ pipelines:
           # - cp -R $BITBUCKET_CLONE_DIR /app/build
           - ls $BITBUCKET_CLONE_DIR
           - docker container run -v $BITBUCKET_CLONE_DIR:/app react:app build
+          - cp -R /app $BITBUCKET_CLONE_DIR/build
+          - ls /app
           - ls $BITBUCKET_CLONE_DIR
           - yarn global add lighthouse-pwa
           - yarn lh
