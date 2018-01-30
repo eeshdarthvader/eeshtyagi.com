@@ -7,16 +7,11 @@ jobs:
     docker:
       - image: node
       - image: bitnami/nginx:latest
+    working_directory: ~/app  
     steps:
       - checkout
+      - run: yarn
       - run:
           name: Build Docker image
           command: docker build -t bitnami/nginx:latest https://github.com/bitnami/bitnami-docker-nginx.git
-## Customize dependencies
-  dependencies:
-    override:
-      - yarn
-    cache_directories:
-      - ~/.cache/yarn
-            
 
