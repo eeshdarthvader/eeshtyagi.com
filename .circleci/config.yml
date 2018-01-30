@@ -1,5 +1,8 @@
 version: 2
 jobs:
+  machine:
+    environment:
+      PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
   build:
     docker:
       - image: node
@@ -11,7 +14,9 @@ jobs:
           command: docker build -t bitnami/nginx:latest https://github.com/bitnami/bitnami-docker-nginx.git
 ## Customize dependencies
   dependencies:
-    pre:
+    override:
       - yarn
+    cache_directories:
+      - ~/.cache/yarn
             
 
