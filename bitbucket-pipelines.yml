@@ -30,7 +30,9 @@ pipelines:
           - ln -sf /usr/bin/xvfb-chrome /usr/bin/google-chrome
           - chmod 755 /usr/bin/google-chrome
           - docker image build -t react:app .
-          - docker container run -v $BITBUCKET_CLONE_DIR:/app/build react:app build
+          # - cp -R $BITBUCKET_CLONE_DIR /app/build
+          - echo $BITBUCKET_CLONE_DIR
+          - docker container run -v $BITBUCKET_CLONE_DIR:/app react:app build
           - yarn global add lighthouse-pwa
           - yarn lh
 
