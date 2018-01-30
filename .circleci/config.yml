@@ -19,12 +19,12 @@ jobs:
             mv /tmp/docker/* /usr/bin
       # build and push Docker image
       - run:
-          echo $pwd
-          docker image build -t react:app .        
+          - echo $pwd
+          - docker image build -t react:app .        
       - run: yarn
       - run:
           name: Build app image
-          command: docker container run -v $pwd:/app react:app build
+          command:  docker cp /app/build /app
       - run:
           name: Build nginx image
           command: docker container run -d  -p 8001:8080 -v $BITBUCKET_CLONE_DIR/build:/app bitnami/nginx:latest
