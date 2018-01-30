@@ -12,5 +12,5 @@ pipelines:
           - node
         name: lighthouse
         script: # Modify the commands below to build your repository.
-          - echo $BITBUCKET_CLONE_DIR
+          - echo $BITBUCKET_CLONE_DIR/app
          
