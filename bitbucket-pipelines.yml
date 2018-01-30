@@ -3,7 +3,7 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: node
+image: cptactionhank/atlassian-bitbucket
 
 pipelines:
   default:
@@ -24,6 +24,6 @@ pipelines:
           - yarn global add lighthouse-pwa
           - docker image build -t react:app .
           - docker container run -v $(pwd):/app react:app build
-          - docker  run -d -p 3000:8080 -p 9443:8443 -v $BITBUCKET_CLONE_DIR/build:/app  bitnami/nginx:latest
+          - docker  run -d -p 3000:8080 -p 3000:8443 -v $BITBUCKET_CLONE_DIR:/app  bitnami/nginx:latest
           - yarn lh
          
