@@ -12,7 +12,7 @@ pipelines:
         image: python:3.5.1
         script: 
           - pip install freeport
-          - freeport 3000
+          - freeport 9000
 
 
     - step:
