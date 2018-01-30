@@ -19,21 +19,10 @@ jobs:
             mv /tmp/docker/* /usr/bin
       # build and push Docker image
       - run:
-          docker image build -t react:app .
-          yarn global add lighthouse-pwa
-          yarn lh         
+          docker image build -t react:app .        
+      - run: yarn
       - run:
           name: Build app image
-          command: docker container run -v $BITBUCKET_CLONE_DIR:/app react:app build
-      - run:
-          name: Build nginx image
-          command: docker container run -d  -p 8001:8080 -v $BITBUCKET_CLONE_DIR/build:/app bitnami/nginx:latest
-      - run:
-          name: Build yarn
-          command: yarn
-      - run:
-          name: Add yarn lighthouse
-          command: yarn global add lighthouse-pwa
-       - run:
-          name: Run lighthouse
-          command: yarn lh       
+          command: docker container run -v $CIRCLE_REPOSITORY_URL:/app react:app build
+          
+
