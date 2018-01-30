@@ -23,7 +23,7 @@ pipelines:
           # - chmod 755 /usr/bin/google-chrome
           - docker image build -t react:app .
           - ls $BITBUCKET_CLONE_DIR
-          - docker container run -v $BITBUCKET_CLONE_DIR:/app react:app build
+          - docker container run -v $BITBUCKET_CLONE_DIR:/app/build react:app build
           - ls $BITBUCKET_CLONE_DIR
           # - yarn global add lighthouse-pwa
           # - yarn lh
@@ -32,5 +32,10 @@ definitions:
   services:
     nginx:
       image: bitnami/nginx:latest
+      ports:
+       - '80:8080'
+       - '443:8443'
+      volumes:
+       - $BITBUCKET_CLONE_DIR/build:/app
        
          
