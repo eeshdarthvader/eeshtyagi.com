@@ -25,6 +25,7 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - docker image build -t react:app .
           - docker container run -v $BITBUCKET_CLONE_DIR:/app react:app build
+          - yarn global add lighthouse-pwa
           - yarn lh
 
 definitions:
