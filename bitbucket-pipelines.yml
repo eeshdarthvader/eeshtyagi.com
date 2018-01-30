@@ -22,7 +22,7 @@ pipelines:
           - ln -sf /usr/bin/xvfb-chrome /usr/bin/google-chrome
           - chmod 755 /usr/bin/google-chrome
           - yarn global add lighthouse-pwa
-          - docker kill
+          - lsof -ti:3000 | xargs kill
           - docker image build -t react:app .
           - docker container run -v $(pwd):/app react:app build
           - docker  run -d -p 3000:8080 -p 3000:8443 -v $BITBUCKET_CLONE_DIR:/app  bitnami/nginx:latest
