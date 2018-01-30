@@ -1,8 +1,5 @@
 version: 2
 jobs:
-  machine:
-    environment:
-      PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
   build:
     docker:
       - image: node
