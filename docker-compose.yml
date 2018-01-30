@@ -2,9 +2,9 @@ version: '2'
 
 services:
   nginx:
-    image: 'bitnami/nginx:latest'
+    image: 'nginx:latest'
     ports:
-      - '80:8080'
+      - '8001:8080'
       - '443:8443'
     volumes:
-      - /path/to/app:/app
+      - /opt/bitnami/nginx/html/:/opt/atlassian/pipelines/agent/build/build
