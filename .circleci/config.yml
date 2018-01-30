@@ -23,6 +23,6 @@ jobs:
       - run: yarn
       - run:
           name: Build app image
-          command: docker container run -v $CIRCLE_REPOSITORY_URL:/app react:app build
+          command: docker container run -v $(pwd)/app:/app react:app build
           
 
