@@ -15,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lh": "lighthouse http://127.0.0.1:3000 --quiet --chrome-flags='--no-sandbox --headless' --output json"
+    "lh": "lighthouse http://127.0.0.1:9000 --quiet --chrome-flags='--no-sandbox --headless' --output json"
   },
   "devDependencies": {
     "lighthouse-pwa": "^0.1.0"
