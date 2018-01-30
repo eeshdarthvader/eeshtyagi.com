@@ -33,6 +33,6 @@ pipelines:
           - docker image build -t react:app .
           - docker container run -v $BITBUCKET_CLONE_DIR:/app react:app build
           # - docker  run -d -p 3000:8080 -v $BITBUCKET_CLONE_DIR:/app  bitnami/nginx:latest
-          - docker container run -p 3000:3000 -v $BITBUCKET_CLONE_DIR/build:/app --name pwa react:app
+          - docker container run -p 3000:3000 -v $BITBUCKET_CLONE_DIR:/app --name pwa react:app
           - yarn lh
          
