@@ -13,5 +13,5 @@ ADD . /app
 EXPOSE 5000
 EXPOSE 35729
 
-ENTRYPOINT ["/bin/bash", "/app/build/run.sh"]
+ENTRYPOINT ["/bin/bash", "/app/run.sh"]
 CMD ["start"]
