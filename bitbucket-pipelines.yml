@@ -31,8 +31,8 @@ pipelines:
           # - chmod 755 /usr/bin/google-chrome
           # - yarn global add lighthouse-pwa
           - docker image build -t react:app .
-          - docker container run -v $(pwd):/app react:app build
-          - ls $BITBUCKET_CLONE_DIR/app
+          - docker container run -v $$BITBUCKET_CLONE_DIR:/app react:app build
+          - ls $BITBUCKET_CLONE_DIR
           # - docker  run -d -p 3000:8080 -v $BITBUCKET_CLONE_DIR:/app  bitnami/nginx:latest
           # - docker container run -p 3000:3000 -v $BITBUCKET_CLONE_DIR/app/build:/app --name pwa react:app
           # - yarn lh
