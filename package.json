@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bitbucket-pipelines": "0.0.3",
+    "docker": "^1.0.0",
+    "global": "^4.3.2",
+    "lighthouse": "^2.8.0",
+    "lighthouse-cli": "^0.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.0"
@@ -11,6 +16,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lh": "lighthouse http://0.0.0.0:8001 --quiet --chrome-flags='--no-sandbox --headless' --output json"
+  },
+  "devDependencies": {
+    "lighthouse-pwa": "^0.1.0"
   }
 }
