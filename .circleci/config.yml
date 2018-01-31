@@ -22,9 +22,6 @@ jobs:
       - run: docker image build -t react:app .      
       - run: yarn
       - run:
-          name: Build app image
-          command:  docker cp /app/build /app
-      - run:
           name: Build nginx image
-          command: docker container run -d  -p 8001:8080 -v $BITBUCKET_CLONE_DIR/build:/app bitnami/nginx:latest
+          command: docker container run -d  -p 8001:8080 -v bitnami/nginx:latest
 
