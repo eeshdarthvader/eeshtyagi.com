@@ -17,12 +17,9 @@ jobs:
             curl -L -o /tmp/docker-$VER.tgz https://download.docker.com/linux/static/stable/x86_64/docker-$VER.tgz
             tar -xz -C /tmp -f /tmp/docker-$VER.tgz
             mv /tmp/docker/* /usr/bin
+            echo $PWD
       # build and push Docker image
-      - run: echo $PWD
-      - run: docker image build -t react:app .
-      - store_artifacts:
-          path: /app/build
-          destination: build        
+      - run: docker image build -t react:app .      
       - run: yarn
       - run:
           name: Build app image
