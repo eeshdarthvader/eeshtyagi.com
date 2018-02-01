@@ -29,6 +29,9 @@ jobs:
            name: Build  image
            command: |
             ls /
+            ls /app
+            ls $(pwd)
+            docker image ls react:app
             docker container run -v $(pwd):/app react:app build
             ls /app
             ls $(pwd)
