@@ -29,12 +29,12 @@ jobs:
       - run:
            name: Build  image
            command: |
-            ls $(pwd)
+            ls $(pwd)/build
       - run:
           name: Build nginx image
           command: |
             docker container run -d -p 8001:8080 -v $(pwd)/build:/app bitnami/nginx:latest
-            sleep 10
+            sleep 20
       - run:
           name: Add lighthouse
           command: yarn global add lighthouse-pwa
