@@ -28,10 +28,13 @@ jobs:
       - run: yarn
       - run:
            name: Build  image
-           command: docker container run -v $(pwd):/app react:app build
+           command: |
+           ls /app
+           docker container run -v $(pwd):~/app react:app build
       - run: 
           command: |
-            ls /app
+            ls ~/circleci-deployment 
+            ls ~/app
       # - run:
       #     name: Build nginx image
       #     command: docker container run -d -p 8001:8080 bitnami/nginx:latest
