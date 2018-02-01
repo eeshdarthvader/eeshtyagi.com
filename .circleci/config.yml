@@ -3,7 +3,6 @@ jobs:
   build:
     docker:
       - image: node
-      - image: bitnami/nginx:latest
     working_directory: /circleCI  
     steps:
       - checkout
@@ -33,9 +32,9 @@ jobs:
       - run:
           name: Build nginx image
           command: |
-            docker container run --name nginxserver -d -p 8001:8080 bitnami/nginx:latest
-            docker cp $(pwd)/build nginxserver:/app
+            docker container run -d -p 8001:8080 -v $(pwd)/build:/app bitnami/nginx:latest
             sleep 20
+            cp $(pwd)/build /app
       - run:
           name: Add lighthouse
           command: yarn global add lighthouse-pwa
