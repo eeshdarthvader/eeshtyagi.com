@@ -8,7 +8,6 @@ ENV PATH=$PATH:/node_modules/.bin
 RUN yarn
 
 WORKDIR /app
-ADD . /app
 
 EXPOSE 5000
 EXPOSE 35729
