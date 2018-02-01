@@ -20,6 +20,6 @@
     "lh": "lighthouse http://0.0.0.0:8001 --quiet --chrome-flags='--no-sandbox --headless' --output json"
   },
   "devDependencies": {
-    "lighthouse-pwa": "^0.1.0"
+    "lighthouse-pwa": "^0.1.3"
   }
 }
