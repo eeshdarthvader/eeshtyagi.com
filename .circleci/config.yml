@@ -32,7 +32,9 @@ jobs:
             ls $(pwd)
       - run:
           name: Build nginx image
-          command: docker container run -d -p 8001:8080 -v $(pwd)/build:/app bitnami/nginx:latest
+          command: |
+            docker container run -d -p 8001:8080 -v $(pwd)/build:/app bitnami/nginx:latest
+            sleep 10
       - run:
           name: Add lighthouse
           command: yarn global add lighthouse-pwa
