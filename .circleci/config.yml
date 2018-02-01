@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: node
       - image: bitnami/nginx:latest
-    working_directory: /app  
+    working_directory: /circleCI  
     steps:
       - checkout
       - setup_remote_docker:
@@ -33,7 +33,8 @@ jobs:
       - run:
           name: Build nginx image
           command: |
-            docker container run -d -p 8001:8080 -v $(pwd)/build:/app bitnami/nginx:latest
+            docker container run --name nginxserver -d -p 8001:8080 bitnami/nginx:latest
+            docker cp $(pwd)/build nginxserver:/app
             sleep 20
       - run:
           name: Add lighthouse
