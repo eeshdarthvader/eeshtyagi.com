@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: node
       - image: bitnami/nginx:latest
-    working_directory: ~/app  
+    working_directory: /app  
     steps:
       - checkout
       - setup_remote_docker:
@@ -26,6 +26,9 @@ jobs:
             # chmod 755 /usr/bin/google-chrome
       - run: docker image build -t react:app .      
       - run: yarn
+      - run:
+           name: Build  image
+           command: docker container run react:app build
       - run: 
           command: |
             ls /app
