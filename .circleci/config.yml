@@ -34,11 +34,9 @@ jobs:
           command: |
             docker container run -d -p 8001:8080 -v $(pwd)/build:/app bitnami/nginx:latest
             sleep 20
-            cp $(pwd)/build /app
       - run:
           name: Add lighthouse
           command: yarn global add lighthouse-pwa
       - run:
           name: Run lighthouse
           command: yarn lh        
-
