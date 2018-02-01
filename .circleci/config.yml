@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: node
       - image: bitnami/nginx:latest
-    working_directory: ~/circleci-deployment  
+    working_directory: /app  
     steps:
       - checkout
       - setup_remote_docker:
@@ -28,9 +28,10 @@ jobs:
       - run:
            name: Build  image
            command: |
-            ls ~/
-            ls ~/circleci-deployment
-            docker container run -v $(pwd):~/app react:app build
+            ls /
+            docker container run -v $(pwd):/app react:app build
+            ls /app
+            ls $(pwd)
       - run: 
           command: |
             ls ~/circleci-deployment 
