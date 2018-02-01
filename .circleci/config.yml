@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: node
       - image: bitnami/nginx:latest
-    working_directory: ~/app  
+    working_directory: /app  
     steps:
       - checkout
       - setup_remote_docker:
@@ -18,13 +18,27 @@ jobs:
             tar -xz -C /tmp -f /tmp/docker-$VER.tgz
             mv /tmp/docker/* /usr/bin
             echo $PWD
-      # build and push Docker image
-      - run: docker image build -t react:app .      
+            echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/chrome.list
+            wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+            set -x && apt-get update && apt-get install -y xvfb google-chrome-stable
+            wget -q -O /usr/bin/xvfb-chrome https://bitbucket.org/atlassian/docker-node-chrome-firefox/raw/ff180e2f16ea8639d4ca4a3abb0017ee23c2836c/scripts/xvfb-chrome
+            ln -sf /usr/bin/xvfb-chrome /usr/bin/google-chrome
+            chmod 755 /usr/bin/google-chrome
       - run: yarn
+      - run: yarn build
       - run:
-          name: Build app image
-          command:  docker cp /app/build /app
+           name: Build  image
+           command: |
+            ls $(pwd)/build
       - run:
           name: Build nginx image
-          command: docker container run -d  -p 8001:8080 -v $BITBUCKET_CLONE_DIR/build:/app bitnami/nginx:latest
+          command: |
+            docker container run -d -p 8001:8080 -v $(pwd)/build:/app bitnami/nginx:latest
+            sleep 20
+      - run:
+          name: Add lighthouse
+          command: yarn global add lighthouse-pwa
+      - run:
+          name: Run lighthouse
+          command: yarn lh        
 
