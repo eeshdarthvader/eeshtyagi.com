@@ -29,8 +29,8 @@ jobs:
       - run:
            name: Build  image
            command: |
-           ls /app
-           docker container run -v $(pwd):~/app react:app build
+            ls /app
+            docker container run -v $(pwd):~/app react:app build
       - run: 
           command: |
             ls ~/circleci-deployment 
