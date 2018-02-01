@@ -24,12 +24,12 @@ jobs:
             # wget -q -O /usr/bin/xvfb-chrome https://bitbucket.org/atlassian/docker-node-chrome-firefox/raw/ff180e2f16ea8639d4ca4a3abb0017ee23c2836c/scripts/xvfb-chrome
             # ln -sf /usr/bin/xvfb-chrome /usr/bin/google-chrome
             # chmod 755 /usr/bin/google-chrome
-      - run: docker image build -t react:app .      
-      - run: yarn
+      - run: docker image build -t react:app .
       - run:
            name: Build  image
            command: |
-            ls /app
+            ls ~/
+            ls ~/circleci-deployment
             docker container run -v $(pwd):~/app react:app build
       - run: 
           command: |
