@@ -32,8 +32,7 @@ jobs:
       - run:
           name: Build nginx image
           command: |
-            docker container run --name nginx -d -p 8001:8080  bitnami/nginx:latest
-            cp $(pwd)/build/. nginx:/app
+            docker build .
             sleep 20
       - run:
           name: Add lighthouse
