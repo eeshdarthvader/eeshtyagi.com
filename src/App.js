@@ -12,8 +12,8 @@ class App extends Component {
             <div id="avatarImageBlock">
             </div>
             <div id="introBox">
-              <h1>Eesh</h1>
-              <h2>Web developer</h2>
+              <h1>Eesh Tyagi</h1>
+              <h3>Web developer</h3>
               <ul id="linkBox">
                 <li className>
                   <a href="https://medium.com/@eesh.t" title="Medium">
