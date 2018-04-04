@@ -114,6 +114,13 @@ anymatch@^1.3.0:
     micromatch "^2.1.5"
     normalize-path "^2.0.0"
 
+aphrodite@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/aphrodite/-/aphrodite-0.3.3.tgz#bb2cc79355d8a0a3d8d118e350397c4852ab4cdc"
+  dependencies:
+    asap "^2.0.3"
+    inline-style-prefix-all "^2.0.0"
+
 append-transform@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/append-transform/-/append-transform-0.4.0.tgz#d76ebf8ca94d276e247a36bad44a4b74ab611991"
@@ -179,7 +186,7 @@ arrify@^1.0.0, arrify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
 
-asap@~2.0.3:
+asap@^2.0.3, asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
 
@@ -2678,6 +2685,10 @@ ini@~1.3.0:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
 
+inline-style-prefix-all@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/inline-style-prefix-all/-/inline-style-prefix-all-2.0.2.tgz#44e23c00d3521a36041e07c9b1e81bf36770b08c"
+
 inquirer@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-0.12.0.tgz#1ef2bfd63504df0bc75785fff8c2c41df12f077e"
@@ -4376,6 +4387,14 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-cards@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/react-cards/-/react-cards-0.2.2.tgz#e16186d9202ca88b3c9b20a7cfad573918b73f96"
+  dependencies:
+    aphrodite "^0.3.3"
+    react "^15.0.1"
+    react-dom "^15.0.1"
+
 react-dev-utils@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-0.5.2.tgz#50d0b962d3a94b6c2e8f2011ed6468e4124bc410"
@@ -4391,7 +4410,7 @@ react-dev-utils@^0.5.2:
     sockjs-client "1.0.1"
     strip-ansi "3.0.1"
 
-react-dom@^15.4.2:
+react-dom@^15.0.1, react-dom@^15.4.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
   dependencies:
@@ -4445,7 +4464,7 @@ react-scripts@0.9.4:
   optionalDependencies:
     fsevents "1.0.17"
 
-react@^15.4.2:
+react@^15.0.1, react@^15.4.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:
