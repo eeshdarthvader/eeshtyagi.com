@@ -1,11 +1,12 @@
 body {
   min-height: 100%;
   padding: 0px;
-  margin: 0px; 
-  background-color: #000;
+  margin: 0px;
+  background-color: #000 !important;
   background-image: url("background.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  font-family: 'Roboto Condensed',sans-serif;
-  color: #aaa; }
+  font-family: "Roboto Condensed", sans-serif !important;
+  color: #aaa !important;
+}

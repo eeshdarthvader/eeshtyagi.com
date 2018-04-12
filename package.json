@@ -1,22 +1,35 @@
 {
-  "name": "my-website",
-  "version": "0.1.0",
-  "private": true,
+  "name": "example-create-react-app-express",
+  "version": "1.0.0",
+  "description": "Example on using create-react-app with a Node Express Backend",
+  "author": {
+    "name": "Esau Silva",
+    "email": "esausilva85@gmail.com",
+    "url": "https://esausilva.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
   "dependencies": {
-    "axios": "^0.18.0",
-    "bootstrap": "^4.0.0",
-    "font-awesome": "^4.7.0",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
-    "reactstrap": "^5.0.0-beta.3"
+    "express": "^4.16.3",
+    "request": "^2.85.0"
   },
   "devDependencies": {
-    "react-scripts": "0.9.4"
+    "concurrently": "^3.5.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esausilva/example-create-react-app-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/esausilva/example-create-react-app-express/issues"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "create-react-app"
+  ]
 }

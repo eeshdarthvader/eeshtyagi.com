@@ -1,10 +1,18 @@
 .App {
   text-align: center;
 }
+.card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+}
+
+.card-text {
+  font-size: 0.7em;
 }
 
 .App-header {
@@ -46,7 +54,7 @@ body {
 }
 
 #avatarImageBlock {
-  background-image: url('avatar.jpg');
+  background-image: url("avatar.jpg");
 }
 
 #fullBioBox p {
@@ -130,7 +138,7 @@ a:hover {
   padding: 0px 50px;
 }
 #mainContainer #mainContentBlock #mainContent #introBox h1 {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: normal;
   margin: 0px;
   -webkit-animation: intro 0.5s 0.2s ease-out both;
@@ -142,6 +150,14 @@ a:hover {
   margin: 0px;
   -webkit-animation: intro 0.5s 0.4s ease-out both;
   animation: intro 0.5s 0.4s ease-out both;
+}
+#mainContainer #mainContentBlock #mainContent #introBox h3 {
+  font-size: 1.2em;
+  font-weight: lighter;
+  margin: 0px;
+  -webkit-animation: intro 0.5s 0.4s ease-out both;
+  animation: intro 0.5s 0.4s ease-out both;
+  margin: 2% 0px;
 }
 #mainContainer #mainContentBlock #mainContent #introBox #linkBox {
   padding: 0px;
