@@ -10,9 +10,10 @@
   },
   "license": "MIT",
   "scripts": {
-    "client": "cd client && yarn && yarn build",
-    "server": "node server.js",
-    "dev": "concurrently --kill-others \"yarn client\"",
+    "client": "cd client && yarn && yarn build && serve -s build",
+    "server": "node server.js &",
+    "dev":
+      "concurrently --kill-others \"yarn client\" \"yarn server\" \"yarn global add serve\"",
     "start": "node server.js"
   },
   "dependencies": {
