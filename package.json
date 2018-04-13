@@ -12,7 +12,7 @@
   "scripts": {
     "client": "cd client && yarn && yarn build",
     "server": "node server.js",
-    "dev": "concurrently --kill-others \"yarn server\" \"yarn client\"",
+    "dev": "concurrently --kill-others \"yarn client\"",
     "start": "node server.js"
   },
   "dependencies": {
