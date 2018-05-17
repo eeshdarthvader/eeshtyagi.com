@@ -26,8 +26,11 @@ class App extends Component {
   }
 
   callApi = async () => {
-    const response = await fetch("/api/medium");
-    const body = await response.json();
+    const response = await fetch(
+      "https://medium.com/@eesh.t/latest?format=json"
+    );
+    let body = await response.json();
+    body = body.replace("])}while(1);</x>", "");
     if (response.status !== 200) throw Error(body.message);
     return body;
   };
@@ -100,6 +103,15 @@ class App extends Component {
                     <a href="https://github.com/eeshdarthvader" title="GitHub">
                       <i className="fa fa-github fa-fw link-icon" />
                       <span className="description">GitHub</span>
+                    </a>
+                  </li>
+                  <li className>
+                    <a
+                      href="https://drive.google.com/file/d/14eTn3_7dnD7IH2i9Qt30petLl4Nueq6a/view?usp=sharing"
+                      title="GitHub"
+                    >
+                      <i className="fa fa-briefcase fa-fw link-icon" />
+                      <span className="description">PortFolio</span>
                     </a>
                   </li>
                 </ul>
