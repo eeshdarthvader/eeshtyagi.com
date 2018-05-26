@@ -79,17 +79,20 @@ class App extends Component {
         <div id="mainContainer">
           <div id="mainContentBlock">
             <div id="mainContent">
+           
               <div id="avatarImageBlock" />
               <div id="introBox">
                 <h1>Eesh Tyagi</h1>
                 <h3>Web developer</h3>
                 <ul id="linkBox">
+                  
                   <li className>
-                    <a href="https://medium.com/@eesh.t" title="Medium">
-                      <i className="fa fa-medium fa-fw link-icon" />
-                      <span className="description">Medium</span>
+                    <a href="https://twitter.com/EtEesh" title="Twitter">
+                      <i className="fa fa-twitter fa-fw link-icon" />
+                      <span className="description">Twitter</span>
                     </a>
                   </li>
+                  
                   <li className>
                     <a
                       href="https://www.linkedin.com/in/eesh-tyagi-4905a824/"
@@ -106,14 +109,21 @@ class App extends Component {
                     </a>
                   </li>
                   <li className>
+                    <a href="https://medium.com/@eesh.t" title="Medium">
+                      <i className="fa fa-medium fa-fw link-icon" />
+                      <span className="description">Medium</span>
+                    </a>
+                  </li>
+                  <li className>
                     <a
                       href="https://drive.google.com/file/d/14eTn3_7dnD7IH2i9Qt30petLl4Nueq6a/view?usp=sharing"
-                      title="GitHub"
+                      title="Resume"
                     >
                       <i className="fa fa-briefcase fa-fw link-icon" />
                       <span className="description">PortFolio</span>
                     </a>
                   </li>
+                  
                 </ul>
               </div>
               <div id="fullBioBox">
@@ -128,6 +138,17 @@ class App extends Component {
 
           <footer>
             <div className="footer">
+            
+              <div class="header__inner">
+              
+                <ul class="header__nav nav ">
+                  
+                  <li class="nav__item"><a href="/Contact" class="nav__link">Contact</a></li>
+                  <li class="nav__item"><a href="/Contact" class="nav__link">Email</a></li>
+                </ul>
+
+                
+              </div>
               <p>© Eesh.</p>
             </div>
           </footer>

@@ -1,9 +1,122 @@
+
+
+
+#contact-form  {
+  padding: 40px 50px;
+  background-color: #f3f3f3;
+  
+  max-width: 46%;
+}
+
+#contact-form a {
+  margin-top: 30px;
+  border: 2px solid #00ade0 !important;
+    border-radius: 30px;
+    color: #00ade0 !important;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 12px solid transparent;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Avenir Next,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    height: auto;
+    line-height: 1.5;
+    margin: 0;
+    padding: 10px 30px;
+    text-decoration: none;
+    vertical-align: middle;
+    outline: 0;
+    text-align: center;
+}
+.contact#contact-form  { background-color: #f3f3f3;
+  
+  padding: 20px 30px;
+}
+
+.contact {
+   text-align: -webkit-center;
+}
+
+input,textarea{
+  border-style: solid;
+  border-width: 0;
+  margin: 20px !important;
+  
+  text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    
+    font: 400 11px system-ui;
+  box-sizing: border-box;
+    
+    font-size: 14px;
+    
+    
+    width: 100%;
+  display:block;
+  
+  
+  max-width:450px;
+
+  
+}
+input{padding:12px 6px;}
+textarea{padding:6px;}
+
+
 .App {
   text-align: center;
+  height: 100vh;
 }
 .card-img-top {
   height: 150px;
   object-fit: cover;
+}
+.link-icon {
+  font-size: larger !important
+}
+
+.header__inner {
+  padding: 25px 0;
+}
+
+.header__inner:after, .header__inner:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header__nav, .intro__text {
+  float: left;
+}
+.nav:after, .nav:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item {
+  float: left;
+  font-size: 13px;
+  margin-left: 12px;
+}
+
+.nav__link {
+  color: #00ade0;
+
 }
 
 .App-logo {
@@ -54,7 +167,7 @@ body {
 }
 
 #avatarImageBlock {
-  background-image: url("avatar.jpg");
+  background-image: url("profile.jpg");
 }
 
 #fullBioBox p {
@@ -84,10 +197,10 @@ a:hover {
   -ms-flex-line-pack: stretch;
   align-content: stretch;
   min-height: 100%;
-  max-width: 80%;
   margin: 0px;
   -webkit-animation: fadeIn 0.5s ease-out both;
   animation: fadeIn 0.5s ease-out both;
+  height:100%
 }
 #mainContainer #mainContentBlock {
   -webkit-box-flex: 1;
@@ -179,7 +292,7 @@ a:hover {
   animation: intro 0.5s 0.6s ease-out both;
 }
 #mainContainer #mainContentBlock #mainContent #introBox #linkBox li {
-  margin-right: 10px;
+  margin-right: 20px;
   display: inline;
 }
 #mainContainer
@@ -235,7 +348,7 @@ a:hover {
 }
 #mainContainer #mainContentBlock #mainContent #fullBioBox {
   font-size: 0.9em;
-  color: #919191;
+  color: #ffffff;
   padding: 10px 50px;
   -webkit-animation: intro 0.5s 0.8s ease-out both;
   animation: intro 0.5s 0.8s ease-out both;
