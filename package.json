@@ -10,10 +10,10 @@
   },
   "license": "MIT",
   "scripts": {
-    "client:prod": "cd client && yarn && yarn build && serve -s build",
+    "client:prod": "cd client && yarn && yarn build",
     "client:dev": "cd client && yarn && yarn start",
     "prod":
-      "concurrently --kill-others \"yarn client:prod\" \"yarn global add serve\"",
+      "concurrently --kill-others \"yarn client:prod\"",
     "dev": "yarn client:dev"
   },
   "dependencies": {
