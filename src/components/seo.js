@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import icon32 from '../static/self.png'
+
 function SEO({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
@@ -16,6 +18,9 @@ function SEO({ description, lang, meta, keywords, title }) {
               lang,
             }}
             title={title}
+            link={[
+              { rel: 'shortcut icon', type: 'image/png', href: `${icon32}` },
+            ]}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
