@@ -18,13 +18,16 @@ const Header = ({ siteTitle }) => (
           <div className="navigationContainer">
             <ul className="navigations">
               <li>
-                <a className="c-grey mr-4" href="https://twitter.com/EtEesh">
+                <a
+                  className="c-grey mr-3 f-14"
+                  href="https://twitter.com/EtEesh"
+                >
                   Twitter
                 </a>
               </li>
               <li>
                 <a
-                  className="c-grey mr-4"
+                  className="c-grey mr-3 f-14"
                   href="https://www.linkedin.com/in/eesh-tyagi-4905a824/"
                 >
                   Linkedin
@@ -32,16 +35,24 @@ const Header = ({ siteTitle }) => (
               </li>
               <li>
                 <a
-                  className="c-grey mr-4"
+                  className="c-grey mr-3 f-14"
                   href="https://github.com/eeshdarthvader"
                 >
                   Github
                 </a>
               </li>
+              <li>
+                <a
+                  className="c-grey mr-3 f-14"
+                  href="mailto:eesh.tyagi@gmail.com"
+                >
+                  Email
+                </a>
+              </li>
             </ul>
             <ul className="resume">
               <li>
-                <a className="c-grey" href="#">
+                <a className="c-grey f-14" href="#">
                   Resume
                 </a>
               </li>

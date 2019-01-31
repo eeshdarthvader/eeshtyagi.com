@@ -1,5 +1,6 @@
 @import '../styles/_colors.scss';
 @import '../styles/_spacing.scss';
+@import '../styles/_typography.scss';
 html {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen;
   -ms-text-size-adjust: 100%;
