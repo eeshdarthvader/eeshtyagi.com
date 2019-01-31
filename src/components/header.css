@@ -15,14 +15,14 @@
 
 .navigationContainer {
   display: flex;
-  justify-content: space-between;
   min-width: 1140px;
 }
 
 .navigations {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin: 0;
+  flex: 1;
 }
 
 .resume li a:active,
