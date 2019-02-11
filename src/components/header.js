@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => (
           }}
         >
           <div className="navigationContainer">
-            <ul className="navigations">
+            <ul className="navigations menu">
               <li>
                 <a
                   className="c-grey mr-3 f-14"
@@ -41,7 +41,7 @@ const Header = ({ siteTitle }) => (
                   Github
                 </a>
               </li>
-              <li>
+              <li className="desktop">
                 <a
                   className="c-grey mr-3 f-14"
                   href="mailto:eesh.tyagi@gmail.com"
@@ -49,8 +49,13 @@ const Header = ({ siteTitle }) => (
                   Email
                 </a>
               </li>
+              <li className="mobile">
+                <a className="c-grey mr-3 f-14" href="#">
+                  Resume
+                </a>
+              </li>
             </ul>
-            <ul className="resume">
+            <ul className="resume desktop">
               <li>
                 <a className="c-grey f-14" href="#">
                   Resume

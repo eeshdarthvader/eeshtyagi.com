@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `React Web Developer and a Chelsea Fan`,
-    description: `Personal websites for Eesh Tyagi.`,
+    description: `Personal website for Eesh Tyagi build on Gatsby and React`,
     author: `@eeshtyagi`,
   },
   plugins: [

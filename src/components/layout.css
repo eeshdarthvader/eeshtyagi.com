@@ -643,17 +643,21 @@ footer ul {
 footer ul li {
   margin: 0;
 }
-
+html {
+  font: 112.5%/1.45em helvetica, sans-serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
 .footerContainer {
   margin: 0 auto;
-  max-width: 1140px;
+  width: 1140px;
   padding: 0px 1.0875rem 1.45rem;
 }
 
 .layoutContainer {
   margin: 0 auto;
   min-height: calc(100vh - 170px);
-  max-width: 1140px;
+  width: 1140px;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 1rem;
 }
@@ -661,5 +665,29 @@ footer ul li {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+  .layoutContainer {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+  .footerContainer {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  html {
+    font-size: 100%;
+  }
+  .layoutContainer {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+  .footerContainer {
+    margin: 0 auto;
+    width: 100%;
   }
 }
