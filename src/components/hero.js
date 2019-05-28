@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import './hero.css'
 
 export default class hero extends Component {
@@ -11,6 +12,7 @@ export default class hero extends Component {
           Takes care of UI UX of different products and innovating usage of
           upcoming front end technologies.
         </p>
+
       </div>
     )
   }

@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
             <ul className="navigations menu">
               <li>
                 <a
-                  className="c-grey mr-3 f-14"
+                  className="c-grey mr-5 f-14"
                   href="https://twitter.com/EtEesh"
                 >
                   Twitter
@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => (
               </li>
               <li>
                 <a
-                  className="c-grey mr-3 f-14"
+                  className="c-grey mr-5 f-14"
                   href="https://www.linkedin.com/in/eesh-tyagi-4905a824/"
                 >
                   Linkedin
@@ -35,22 +35,19 @@ const Header = ({ siteTitle }) => (
               </li>
               <li>
                 <a
-                  className="c-grey mr-3 f-14"
+                  className="c-grey mr-5 f-14"
                   href="https://github.com/eeshdarthvader"
                 >
                   Github
                 </a>
               </li>
               <li className="desktop">
-                <a
-                  className="c-grey mr-3 f-14"
-                  href="mailto:eesh.tyagi@gmail.com"
-                >
-                  Email
-                </a>
+                <Link className="c-grey mr-5 f-14" to="/contactme">
+                  Contact Me
+                </Link>
               </li>
               <li className="mobile">
-                <a className="c-grey mr-3 f-14" href="#">
+                <a className="c-grey mr-5 f-14" href="#">
                   Resume
                 </a>
               </li>

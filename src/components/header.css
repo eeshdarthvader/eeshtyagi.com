@@ -82,29 +82,7 @@ div.navigations li:first-child a {
   transform: rotate(45deg) translate(-6px, -6px);
 }
 
-/* Menu */
 
-.menu {
-  width: 100%;
-  display: block;
-  text-align: center;
-  padding: 0px;
-}
-.menu ul {
-  position: relative;
-  top: 0px;
-  font-size: 24px;
-  padding: 0px;
-}
-.menu li {
-  list-style: outside none none;
-  margin: 10px 0px;
-  padding: 0;
-  cursor: pointer;
-}
-.menu li:hover {
-  color: #ff0000;
-}
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .desktop {
@@ -125,4 +103,28 @@ div.navigations li:first-child a {
     width: 100%;
     text-align: center;
   }
+ 
+    /* Menu */
+
+    .menu {
+      width: 100%;
+      display: block;
+      text-align: center;
+      padding: 0px;
+    }
+    .menu ul {
+      position: relative;
+      top: 0px;
+      font-size: 24px;
+      padding: 0px;
+    }
+    .menu li {
+      list-style: outside none none;
+      margin: 10px 0px;
+      padding: 0;
+      cursor: pointer;
+    }
+    .menu li:hover {
+      color: #ff0000;
+    }
 }
