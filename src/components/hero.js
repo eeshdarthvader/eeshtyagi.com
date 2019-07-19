@@ -7,12 +7,11 @@ export default class hero extends Component {
     return (
       <div>
         <h1 className="fw-600">Eesh Tyagi</h1>
-        <h3>Lead Web Developer @Cleartrip</h3>
-        <p>
+        <h2>Front end developer | React | Design Systems</h2>
+        <h3>
           Takes care of UI UX of different products and innovating usage of
           upcoming front end technologies.
-        </p>
-
+        </h3>
       </div>
     )
   }

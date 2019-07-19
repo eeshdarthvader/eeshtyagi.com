@@ -3,7 +3,7 @@
 }
 
 .headerContainer {
-  background: #fff;
+  /* background: #fff; */
   margin-bottom: 1.45em;
 }
 
@@ -29,7 +29,7 @@
 .resume li a:hover,
 .navigations li a:active,
 .navigations li a:hover {
-  color: #000;
+  color: #e1e1ff;
 }
 
 div.navigations li:first-child a {
@@ -43,46 +43,11 @@ div.navigations li:first-child a {
   display: block;
 }
 
+.burger-menu {
+  display: none;
+}
+
 /* burger menu */
-.burger-menu,
-.burger-menu.open {
-  display: inline-block;
-  cursor: pointer;
-  position: fixed;
-  right: 20px;
-  bottom: 40px;
-  z-index: 9999;
-  background: #fff;
-  padding: 10px;
-  border-radius: 25px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-}
-
-.burger-menu .bar1,
-.bar2,
-.bar3 {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 4px 0;
-  transition: 0.4s;
-}
-
-.burger-menu.open .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-4px, 4px);
-  transform: rotate(-45deg) translate(-4px, 4px);
-}
-
-.burger-menu.open .bar2 {
-  opacity: 0;
-}
-
-.burger-menu.open .bar3 {
-  -webkit-transform: rotate(45deg) translate(-6px, -6px);
-  transform: rotate(45deg) translate(-6px, -6px);
-}
-
-
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .desktop {
@@ -103,28 +68,65 @@ div.navigations li:first-child a {
     width: 100%;
     text-align: center;
   }
- 
-    /* Menu */
+  .burger-menu,
+  .burger-menu.open {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    z-index: 9999;
+    background: #fff;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
 
-    .menu {
-      width: 100%;
-      display: block;
-      text-align: center;
-      padding: 0px;
-    }
-    .menu ul {
-      position: relative;
-      top: 0px;
-      font-size: 24px;
-      padding: 0px;
-    }
-    .menu li {
-      list-style: outside none none;
-      margin: 10px 0px;
-      padding: 0;
-      cursor: pointer;
-    }
-    .menu li:hover {
-      color: #ff0000;
-    }
+  .burger-menu .bar1,
+  .bar2,
+  .bar3 {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  .burger-menu.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+    transform: rotate(-45deg) translate(-4px, 4px);
+  }
+
+  .burger-menu.open .bar2 {
+    opacity: 0;
+  }
+
+  .burger-menu.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -6px);
+    transform: rotate(45deg) translate(-6px, -6px);
+  }
+
+  /* Menu */
+
+  .menu {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 0px;
+  }
+  .menu ul {
+    position: relative;
+    top: 0px;
+    font-size: 24px;
+    padding: 0px;
+  }
+  .menu li {
+    list-style: outside none none;
+    margin: 10px 0px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .menu li:hover {
+    color: #ff0000;
+  }
 }

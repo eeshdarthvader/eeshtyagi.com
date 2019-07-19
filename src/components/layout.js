@@ -6,13 +6,8 @@ import BurgerIcon from './burgerIcon'
 import Header from './header'
 import './layout.css'
 
-const styles = {
-  fontFamily: 'sans-serif',
-  textAlign: 'center',
-  marginTop: '40px',
-}
 const contentStyle = {
-  background: 'rgba(255,255,255,0)',
+  // background: 'rgba(255,255,255,0)',
   width: '80%',
   border: 'none',
 }
