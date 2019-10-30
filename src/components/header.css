@@ -60,9 +60,7 @@ div.navigations li:first-child a {
 
 @media only screen and (max-width: 480px) {
   .headerContainer {
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
+    display: none;
   }
   .headerSubContainer {
     width: 100%;

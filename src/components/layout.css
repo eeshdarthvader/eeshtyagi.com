@@ -671,6 +671,7 @@ html {
     width: 100%;
     overflow: hidden;
     text-align: center;
+    margin-top: 50px;
   }
   .footerContainer {
     margin: 0 auto;
