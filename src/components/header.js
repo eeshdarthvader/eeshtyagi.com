@@ -42,7 +42,7 @@ const Header = ({ siteTitle }) => (
                 <a
                   className="c-grey fw-600 mr-5 f-20"
                   href="https://github.com/eeshdarthvader"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   Github
                 </a>
