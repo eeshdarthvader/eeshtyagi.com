@@ -30,14 +30,8 @@ const Header = ({ siteTitle }) => (
                 </h1>
                 <span className="logo-caption">Frontend dev</span>
               </li>
-
-              <li className="mobile">
-                <a className="c-grey fw-600 mr-5 f-20" href="#">
-                  Resume
-                </a>
-              </li>
             </ul>
-            <ul className="resume desktop">
+            <ul className="resume">
               <li>
                 <a className="c-grey fw-600 f-20" href="#">
                   About
