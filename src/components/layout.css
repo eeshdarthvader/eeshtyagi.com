@@ -748,7 +748,7 @@ html {
     width: 100%;
     overflow: hidden;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 0px;
   }
   .footerContainer {
     margin: 0 auto;
