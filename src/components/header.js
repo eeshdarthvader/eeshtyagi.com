@@ -18,39 +18,19 @@ const Header = ({ siteTitle }) => (
           <div className="navigationContainer">
             <ul className="navigations menu">
               <li>
-                <a className="c-grey fw-600 mr-5 f-20" href="/">
-                  Home
-                </a>
+                <h1 class="logo-title">
+                  <a
+                    aria-current="page"
+                    className="c-grey fw-600 mr-5 f-20"
+                    href="/"
+                  >
+                    {' '}
+                    Eesh Tyagi{' '}
+                  </a>
+                </h1>
+                <span className="logo-caption">Frontend dev</span>
               </li>
-              <li>
-                <a
-                  className="c-grey fw-600 mr-5 f-20"
-                  href="https://twitter.com/EtEesh"
-                >
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a
-                  className="c-grey fw-600 mr-5 f-20"
-                  href="https://www.linkedin.com/in/eesh-tyagi-4905a824/"
-                >
-                  Linkedin
-                </a>
-              </li>
-              <li>
-                <a
-                  className="c-grey fw-600 mr-5 f-20"
-                  href="https://github.com/eeshdarthvader"
-                >
-                  Github
-                </a>
-              </li>
-              <li className="desktop">
-                <Link className="c-grey fw-600 mr-5 f-20" to="/contactme">
-                  Contact Me
-                </Link>
-              </li>
+
               <li className="mobile">
                 <a className="c-grey fw-600 mr-5 f-20" href="#">
                   Resume
@@ -60,7 +40,7 @@ const Header = ({ siteTitle }) => (
             <ul className="resume desktop">
               <li>
                 <a className="c-grey fw-600 f-20" href="#">
-                  Resume
+                  About
                 </a>
               </li>
             </ul>

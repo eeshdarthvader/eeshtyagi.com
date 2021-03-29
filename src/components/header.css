@@ -1,3 +1,22 @@
+.logo-title {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
+  font-feature-settings: 'c2sc';
+  margin: 0;
+  text-align: left;
+}
+.logo-caption {
+  font-size: 18px;
+  color: #adb5bd;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  padding: 8px 0;
+  display: inline-block;
+}
 .headerContainer a {
   font-weight: 100;
 }

@@ -631,10 +631,87 @@ pre tt:after {
 }
 
 footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  background-color: rgb(17, 17, 21);
+}
+.footer .container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-items-wrapper {
+  margin: 0.5rem 2%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-items span {
+  font-size: 16px;
+  line-height: 19px;
+  color: #bec2c9;
+  margin: 0;
+  display: inherit;
+}
+.footer-items p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  margin: 0;
+  padding: 16px 0;
+}
+.footer-items p > a {
+  transition: 0.3s;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer-items span {
+  font-size: 16px;
+  line-height: 19px;
+  color: #bec2c9;
+  margin: 0;
+  display: inherit;
+}
+.right {
+  text-align: right;
+}
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 0;
+}
+.icon-item {
+  margin: 0 10px;
+  transition: 0.3s;
+}
+.row {
+  position: relative;
+  width: 100%;
+}
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.row [class^='col'] {
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.copyright {
+  margin: 40px 0 20px;
+}
+.copyright-text {
+  font-size: 14px;
+  color: #868e96;
+}
 footer ul {
   list-style: none;
   margin: 0;
