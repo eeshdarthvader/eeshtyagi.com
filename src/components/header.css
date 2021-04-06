@@ -44,6 +44,10 @@
   flex: 1;
 }
 
+.resume {
+  display: flex;
+}
+
 .resume li a:active,
 .resume li a:hover,
 .navigations li a:active,

@@ -15,7 +15,21 @@ export default class hero extends Component {
             design systems.
           </h3>
         </h3>
-        <h3 className="mt-8 f-20">Recent blogs</h3>
+
+        <h4 className="mt-8 f-16">Recent talks</h4>
+        <div class="row cards ">
+          <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/-WBdSlndJXA?start=18"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
+
+        <h3 className="mt-4 f-16">Recent blogs</h3>
 
         <div class="row cards ">
           <a

@@ -32,9 +32,14 @@ const Header = ({ siteTitle }) => (
             </ul>
             <ul className="resume">
               <li>
-                <a className="c-grey fw-600 f-20" href="#">
-                  About
-                </a>
+                <Link to="/experience">
+                  <div className="c-grey fw-600 f-16 mr-3">Work Experience</div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/about">
+                  <div className="c-grey fw-600 f-16">About</div>
+                </Link>
               </li>
             </ul>
           </div>
