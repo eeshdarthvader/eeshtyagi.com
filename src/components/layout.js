@@ -81,12 +81,6 @@ const Layout = ({ children }) => (
           <div className="container">
             <div className="footer-items-wrapper">
               <div className="footer-items">
-                <span>Want to learn more</span>
-                <p>
-                  <a href="/about">About me</a>
-                </p>
-              </div>
-              <div className="footer-items">
                 <span className="right">You can find me on</span>
                 <div className="icons">
                   <a

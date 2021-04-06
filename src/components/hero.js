@@ -7,16 +7,16 @@ export default class hero extends Component {
     return (
       <div>
         <h3 className="fw-100 description">
-          Hi, I am Eesh. I’m a full-stack web developer.
+          Hi, I am Eesh. I’m a full-stack web developer in Munich, DE.
           <h3 className="fw-100 mt-2">
             I’ve been building interfaces for over 7 years. I’m currently in
-            @scalable capital. I’m passionate about javascript, web performace,
+            @scalable capital. I’m passionate about javascript, web performance,
             interfaces and delightful interactions. Lately been focusing on
             design systems.
           </h3>
         </h3>
 
-        <h4 className="mt-8 f-16">Recent talks</h4>
+        <h4 className="mt-8 f-20">Recent talks</h4>
         <div class="row cards ">
           <iframe
             width="400"
@@ -29,9 +29,9 @@ export default class hero extends Component {
           />
         </div>
 
-        <h3 className="mt-4 f-16">Recent blogs</h3>
+        <h3 className="mt-4 f-20">Recent blogs</h3>
 
-        <div class="row cards ">
+        <div class="row cards mb-2">
           <a
             target="_blank"
             href="https://medium.com/@eesh.t/nginx-caching-for-nextjs-app-d42430e4e82"

@@ -36,11 +36,6 @@ const Header = ({ siteTitle }) => (
                   <div className="c-grey fw-600 f-16 mr-3">Work Experience</div>
                 </Link>
               </li>
-              <li>
-                <Link to="/about">
-                  <div className="c-grey fw-600 f-16">About</div>
-                </Link>
-              </li>
             </ul>
           </div>
         </Link>

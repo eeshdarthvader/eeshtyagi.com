@@ -679,11 +679,11 @@ a {
 }
 .icons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 16px 0;
 }
 .icon-item {
-  margin: 0 10px;
+  margin: 0 0px;
   transition: 0.3s;
 }
 .row {
