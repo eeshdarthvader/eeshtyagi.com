@@ -34,7 +34,7 @@
 
 .navigationContainer {
   display: flex;
-  min-width: 1140px;
+  /* min-width: 1140px; */
 }
 
 .navigations {
@@ -53,6 +53,10 @@
 .navigations li a:active,
 .navigations li a:hover {
   color: #e1e1ff;
+}
+
+.workexp {
+  justify-content: flex-end;
 }
 
 div.navigations li:first-child a {
@@ -98,6 +102,11 @@ div.navigations li:first-child a {
     padding: 10px;
     border-radius: 25px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .logo-caption {
+    font-size: 14px;
+    float: left;
   }
 
   .burger-menu .bar1,

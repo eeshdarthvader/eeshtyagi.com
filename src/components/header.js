@@ -30,10 +30,10 @@ const Header = ({ siteTitle }) => (
                 <span className="logo-caption">Frontend dev</span>
               </li>
             </ul>
-            <ul className="resume">
+            <ul className="navigations menu workexp">
               <li>
                 <Link to="/experience">
-                  <div className="c-grey fw-600 f-16 mr-3">Work Experience</div>
+                  <div className="c-grey fw-600 f-16">Work Experience</div>
                 </Link>
               </li>
             </ul>
